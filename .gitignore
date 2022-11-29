@@ -5,6 +5,8 @@
 .vscode/
 build/
 dist/
+fly.toml
+manifest.toml
 node_modules/
 target/
 *.log

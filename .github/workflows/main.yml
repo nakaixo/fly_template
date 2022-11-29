@@ -18,10 +18,8 @@ jobs:
       - uses: erlef/setup-beam@v1
         with:
           otp-version: "25.0"
-          gleam-version: "0.22.1"
+          gleam-version: "0.25.0"
 
       - run: gleam format --check
 
       - run: gleam test
-
-      - run: gleam build --target=javascript

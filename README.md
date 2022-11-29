@@ -1,6 +1,6 @@
-# fly_template
+# deno_deploy_template
 
-Template for deploying a Nakai app on [Fly.io](https://fly.io)
+Template for deploying a Nakai app on Deno Deploy
 
 ## Quick start
 
