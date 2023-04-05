@@ -2,7 +2,7 @@ name = "fly_template"
 version = "1.0.0"
 licences = ["MIT"]
 description = "Template for deploying a Nakai app on Fly.io"
-repository = { type = "github", user = "nakaibuild", repo = "fly_template" }
+repository = { type = "github", user = "nakaixo", repo = "fly_template" }
 
 
 [dependencies]
