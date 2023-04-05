@@ -4,4 +4,6 @@ Template for deploying a Nakai app on Fly.io
 
 ## Quick start
 
-Clone this repo :^)
+- Clone this repo
+
+- `flyctl deploy`
