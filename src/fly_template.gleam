@@ -4,23 +4,22 @@ import gleam/http/request.{Request}
 import gleam/http/response.{Response}
 import gleam/io
 import nakai
-import pages/home
+import pages/index
+import pages/not_found
 
 pub fn router(req: Request(BitString)) -> Response(BitBuilder) {
   let res =
     response.new(200)
     |> response.set_header("content-type", "text/html; charset=utf-8")
 
-  io.println("get: " <> req.path)
-
-  let document = case req.path {
-    "/" -> home.page()
-    _ -> home.page()
+  let page = case req.path {
+    "/" -> index.page()
+    _ -> not_found.page()
   }
 
-  document
-  |> nakai.render
-  |> bit_builder.from_string
+  page
+  |> nakai.to_string_builder()
+  |> bit_builder.from_string_builder()
   |> response.set_body(res, _)
 }
 

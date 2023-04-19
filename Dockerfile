@@ -1,4 +1,4 @@
-from ghcr.io/gleam-lang/gleam:v0.28.0-erlang-alpine
+from ghcr.io/gleam-lang/gleam:v0.28.3-erlang-alpine
 
 copy . /opt/app/
 
