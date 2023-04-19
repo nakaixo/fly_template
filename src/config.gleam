@@ -10,7 +10,7 @@ pub fn metadata() {
   html.Head([
     html.title("Fly.io Example ✨"),
     head.meta(name: "viewport", content: "width=device-width, initial-scale=1"),
-    head.meta(name: "og:title", content: "Nakai Example ✨"),
+    head.meta(name: "og:title", content: "Fly.io Example ✨"),
     head.meta(
       name: "og:description",
       content: "Template for deploying a Nakai app on Fly.io",
