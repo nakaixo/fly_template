@@ -7,3 +7,9 @@ Template for deploying a Nakai app on Fly.io
 - Clone this repo
 
 - `flyctl deploy`
+
+## Running locally
+
+```sh
+gleam run
+```
