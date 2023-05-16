@@ -3,13 +3,13 @@
 
 packages = [
   { name = "elli", version = "3.3.0", build_tools = ["rebar3"], requirements = [], otp_app = "elli", source = "hex", outer_checksum = "698B13B33D05661DB9FE7EFCBA41B84825A379CCE86E486CF6AFF9285BE0CCF8" },
-  { name = "gleam_elli", version = "2.1.0", build_tools = ["gleam"], requirements = ["elli", "gleam_otp", "gleam_http", "gleam_stdlib"], otp_app = "gleam_elli", source = "hex", outer_checksum = "2578DAA12E950B60EC5C8CE2C166045FD23EE89828752EB19F4B0AF5D38AB260" },
+  { name = "gleam_elli", version = "2.1.0", build_tools = ["gleam"], requirements = ["gleam_stdlib", "elli", "gleam_otp", "gleam_http"], otp_app = "gleam_elli", source = "hex", outer_checksum = "2578DAA12E950B60EC5C8CE2C166045FD23EE89828752EB19F4B0AF5D38AB260" },
   { name = "gleam_erlang", version = "0.18.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_erlang", source = "hex", outer_checksum = "C69F59D086AD50B80DE294FB0963550630971C9DC04E92B1F7AEEDD2C0BE226C" },
   { name = "gleam_http", version = "3.1.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleam_http", source = "hex", outer_checksum = "7BE7A80B5AC8357827169107FAE15AD8423629E6BBBD39A8B4217AFF879B4520" },
-  { name = "gleam_otp", version = "0.5.3", build_tools = ["gleam"], requirements = ["gleam_erlang", "gleam_stdlib"], otp_app = "gleam_otp", source = "hex", outer_checksum = "6E705B69464237353E0380AC8143BDB29A3F0BF6168755D5F2D6E55A34A8B077" },
+  { name = "gleam_otp", version = "0.5.3", build_tools = ["gleam"], requirements = ["gleam_stdlib", "gleam_erlang"], otp_app = "gleam_otp", source = "hex", outer_checksum = "6E705B69464237353E0380AC8143BDB29A3F0BF6168755D5F2D6E55A34A8B077" },
   { name = "gleam_stdlib", version = "0.28.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "1BB6A3E53F7576B9F5C4E5D4AE16487E526BE383B03CBF4068C7DFC77CF38A1C" },
   { name = "gleeunit", version = "0.10.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "ECEA2DE4BE6528D36AFE74F42A21CDF99966EC36D7F25DEB34D47DD0F7977BAF" },
-  { name = "nakai", version = "0.6.1", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "nakai", source = "hex", outer_checksum = "2B8FE3C9E4C3E0E3434633C882400E566CFCB07F4EA96F664B0B23126593B94C" },
+  { name = "nakai", version = "0.7.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "nakai", source = "hex", outer_checksum = "F9A1B3AB4499430DDB0F33F4C8875B7C2B18F0D97DB4DC6C7B4BFF15B2882DB8" },
 ]
 
 [requirements]
@@ -17,4 +17,4 @@ gleam_elli = "~> 2.1"
 gleam_http = "~> 3.1"
 gleam_stdlib = "~> 0.28"
 gleeunit = "~> 0.10"
-nakai = "~> 0.6"
+nakai = "~> 0.7"
