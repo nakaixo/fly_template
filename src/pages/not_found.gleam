@@ -1,6 +1,6 @@
 import config
-import nakai/html
 import nakai/attr
+import nakai/html
 
 pub fn page() {
   html.Fragment([

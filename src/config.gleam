@@ -1,5 +1,5 @@
-import nakai/html
 import nakai/attr
+import nakai/html
 
 pub const header_style = "
   font-family: 'Outfit', serif;
