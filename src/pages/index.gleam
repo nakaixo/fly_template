@@ -1,10 +1,10 @@
 import config
 import nakai/html
-import nakai/html/attrs
+import nakai/attr
 
 pub fn page() {
   html.Fragment([
     config.metadata(),
-    html.h1_text([attrs.style(config.header_style)], "Hello from Gleam!"),
+    html.h1_text([attr.style(config.header_style)], "Hello from Gleam!"),
   ])
 }

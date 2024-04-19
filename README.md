@@ -6,7 +6,9 @@ Template for deploying a Nakai app on Fly.io
 
 - Clone this repo
 
-- `flyctl deploy`
+- Install the [Fly CLI](https://fly.io/docs/flyctl/)
+
+- `fly launch`
 
 ## Running locally
 

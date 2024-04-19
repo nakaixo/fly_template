@@ -1,29 +1,37 @@
-import gleam/bit_builder.{BitBuilder}
-import gleam/http/elli
-import gleam/http/request.{Request}
-import gleam/http/response.{Response}
-import gleam/io
+import gleam/bytes_builder
+import gleam/erlang/process
+import gleam/http/request.{type Request}
+import gleam/http/response.{type Response}
+import gleam/result
+import mist.{type Connection, type ResponseData}
 import nakai
 import pages/index
 import pages/not_found
 
-pub fn router(req: Request(BitString)) -> Response(BitBuilder) {
-  let res =
-    response.new(200)
-    |> response.set_header("content-type", "text/html; charset=utf-8")
-
-  let page = case req.path {
-    "/" -> index.page()
-    _ -> not_found.page()
+pub fn router(req: Request(Connection)) -> Response(ResponseData) {
+  let #(status, page) = case req.path {
+    "/" -> #(200, index.page())
+    _ -> #(404, not_found.page())
   }
 
-  page
-  |> nakai.to_string_builder()
-  |> bit_builder.from_string_builder()
-  |> response.set_body(res, _)
+  let body =
+    page
+    |> nakai.to_string_builder()
+    |> bytes_builder.from_string_builder()
+    |> mist.Bytes()
+
+  response.new(status)
+  |> response.set_header("content-type", "text/html; charset=utf-8")
+  |> response.set_body(body)
 }
 
 pub fn main() {
-  io.println("listening on http://localhost:8080")
-  let _ = elli.become(router, on_port: 8080)
+  use _ <- result.try(
+    mist.new(router)
+    |> mist.port(8080)
+    |> mist.start_http(),
+  )
+
+  process.sleep_forever()
+  Ok(Nil)
 }

@@ -6,10 +6,11 @@ repository = { type = "github", user = "nakaixo", repo = "fly_template" }
 
 
 [dependencies]
-gleam_elli = "~> 2.1"
-gleam_http = "~> 3.4"
-gleam_stdlib = "~> 0.30"
-nakai = "~> 0.8"
+gleam_erlang = "~> 0.25"
+gleam_http = "~> 3.6"
+gleam_stdlib = ">= 0.36.0 and < 2.0.0"
+mist = "~> 1.0"
+nakai = "~> 0.10"
 
 [dev-dependencies]
-gleeunit = "~> 0.10"
+gleeunit = "~> 1.0"

@@ -4,10 +4,5 @@
 .nova/
 .vscode/
 build/
-dist/
 fly.toml
-node_modules/
-target/
 *.log
-*.pyc
-*.tsbuildinfo
