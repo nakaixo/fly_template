@@ -1,4 +1,4 @@
-import gleam/bytes_builder
+import gleam/bytes_tree
 import gleam/erlang/process
 import gleam/http/request.{type Request}
 import gleam/http/response.{type Response}
@@ -16,8 +16,8 @@ pub fn router(req: Request(Connection)) -> Response(ResponseData) {
 
   let body =
     page
-    |> nakai.to_string_builder()
-    |> bytes_builder.from_string_builder()
+    |> nakai.to_string_tree()
+    |> bytes_tree.from_string_tree()
     |> mist.Bytes()
 
   response.new(status)

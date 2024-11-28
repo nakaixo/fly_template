@@ -5,5 +5,5 @@
 **/.vscode/
 **/build/
 **/fly.toml
-**/manifest.toml
+**/LICENSE
 **/*.log
